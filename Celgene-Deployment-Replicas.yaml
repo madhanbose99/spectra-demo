@@ -18,7 +18,6 @@ spec:
       - name: spectra-celgene
         image: relevancelabbigdata/spectra-celgene
         resources:
-          memory_gb: 4
           limits:
             cpu: 3
             memory: 2000Mi
