@@ -17,6 +17,14 @@ spec:
       containers:
       - name: spectra-celgene
         image: relevancelabbigdata/spectra-celgene
+        resources:
+          memory_gb: 4
+          limits:
+            cpu: 3
+            memory: 2000Mi
+          requests:
+            cpu: 1000m
+            memory: 2000Mi
         ports:
         - containerPort: 9090
 ---
