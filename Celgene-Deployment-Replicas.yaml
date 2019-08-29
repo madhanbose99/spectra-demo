@@ -29,7 +29,7 @@ metadata:
   labels:
     app: spectra-celgene
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
   - port: 80
     targetPort: 9090
