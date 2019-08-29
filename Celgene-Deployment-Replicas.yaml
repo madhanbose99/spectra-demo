@@ -17,13 +17,6 @@ spec:
       containers:
       - name: spectra-celgene
         image: relevancelabbigdata/spectra-celgene
-        resources:
-          limits:
-            cpu: 2
-            memory: 2000Mi
-          requests:
-            cpu: 1000m
-            memory: 2000Mi
         ports:
         - containerPort: 9090
 ---
@@ -34,9 +27,10 @@ metadata:
   labels:
     app: spectra-celgene
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
   - port: 9090
+    nodePort: 30082
     name: http
   selector:
     app: spectra-celgene
